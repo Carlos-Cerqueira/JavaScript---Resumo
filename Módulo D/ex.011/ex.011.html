@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aeroporto</title>
+</head>
+
+<body>
+  <h1>Sistema de Passaporte</h1>
+
+  Insira seu país de origem: <input type="text" id="txtnac">
+  <input type="button" value="Enviar" onclick="analisar()">
+
+  <div id="res"></div>
+
+  <script>
+    function analisar() {
+      var país = document.getElementById('txtnac').value;
+      var res = document.querySelector('div#res');
+
+      res.innerHTML = `Seu país de origem: ${país}`
+
+      switch (país) {
+        case 'Brasil':
+          console.log('Brasileiro!')
+          res.innerHTML += `<p>Você é <strong>Brasileiro!</strong></p>`
+          break;
+          
+        case 'EUA':
+          console.log('Americano!')
+          res.innerHTML += `<p>Você é <strong>Americano!</strong></p>`
+          break;
+
+        case 'Reino Unido':
+        case 'Grã-Bretanha':
+          console.log('Inglês!')
+          res.innerHTML += `<p>Você é <strong>Inglês!</strong></p>`
+          break;
+
+        default:
+        res.innerHTML += `<p>Você é <strong>Estrangeiro!</strong></p>`
+      }
+    }
+  </script>
+</body>
+</html>

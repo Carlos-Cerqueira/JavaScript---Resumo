@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exibindo dados da calculadora através de janelas</title>
+  <style>
+    body {
+      background-color: #010101;
+      color: white;
+      font: normal 20pt Arial;
+    }
+  </style>
+</head>
+<body>
+  <h1>Olá, mundo</h1>
+
+  <script>
+    var n1 = Number(window.prompt('Digite um número:'));
+    var n2 = Number(window.prompt('Digite outro número: '));
+
+    soma = n1 + n2;
+    sub = n1 - n2;
+    mult = n1 * n2;
+    div = n1 / n2;
+
+    window.alert(`Você digitou os números ${String(n1)} e ${String(n2)}.\n A soma desses números é: ${soma}.\n A subtração desses números é: ${sub}.\n A multiplicação desses números é: ${mult}.\n A divisão desses números é: ${div}.`);
+  </script>
+</body>
+</html>
